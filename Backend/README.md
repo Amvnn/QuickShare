@@ -59,22 +59,22 @@ A secure file sharing API built with Express.js and MongoDB that allows users to
   - [x] Set multer limits (e.g. 50MB max)
 
 ### 🔄 Step 6: Local vs S3 Storage (Optional Switch)
-- [ ] **Add Storage Abstraction**
-  - [ ] Create a `storageService.js`
-  - [ ] If local mode: Save to `/uploads/`
-  - [ ] If S3 mode: Upload using `@aws-sdk/client-s3`
-  - [ ] Use `.env` to toggle mode
+- [x] **Add Storage Abstraction**
+  - [x] Create a `storageService.js`
+  - [x] If local mode: Save to `/uploads/`
+  - [x] If S3 mode: Upload using `@aws-sdk/client-s3`
+  - [x] Use `.env` to toggle mode
 
 ### 🔄 Step 7: Optional Frontend (or Docs)
-- [ ] **Frontend (optional)**
-  - [ ] Simple upload form
-  - [ ] Show download link after upload
-  - [ ] Show time remaining (if implementing `/status`)
+- [x] **Frontend (optional)**
+  - [x] Simple upload form
+  - [x] Show download link after upload
+  - [x] Show time remaining (if implementing `/status`)
 
-- [ ] **Documentation (Postman or Swagger)**
-  - [ ] Create Postman collection
-  - [ ] Document all endpoints
-  - [ ] Add sample payloads & responses
+- [x] **Documentation (Postman or Swagger)**
+  - [x] Create Postman collection
+  - [x] Document all endpoints
+  - [x] Add sample payloads & responses
 
 ### 🔄 Step 8: Deployment
 - [ ] **Deployment**
@@ -91,78 +91,6 @@ A secure file sharing API built with Express.js and MongoDB that allows users to
   - [ ] Dockerize the app
   - [ ] Rate limiting middleware
   - [ ] Logging with Winston
-
-## 📁 Project Structure
-
-```
-file-sharing-api/
-├── src/
-│   ├── models/          # MongoDB schemas
-│   ├── routes/          # API routes
-│   ├── middleware/      # Custom middleware
-│   ├── services/        # Business logic
-│   ├── utils/           # Utility functions
-│   └── server.js        # Main server file
-├── uploads/             # File storage directory
-├── .env                 # Environment variables
-├── .gitignore          # Git ignore file
-└── package.json        # Dependencies and scripts
-```
-
-## 🛠️ Installation & Setup
-
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd file-sharing-api
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Setup environment variables**
-   ```bash
-   cp .env.example .env
-   # Edit .env with your configuration
-   ```
-
-4. **Start the development server**
-   ```bash
-   npm run dev
-   ```
-
-## 📋 API Endpoints
-
-- `GET /` - API information
-- `POST /upload` - Upload a file
-- `GET /download/:fileId` - Download a file
-- `GET /status/:fileId` - Get file status
-
-## 🔧 Environment Variables
-
-```env
-PORT=3000
-NODE_ENV=development
-MONGO_URI=mongodb://localhost:27017/file-sharing-api
-MAX_FILE_SIZE=52428800
-UPLOAD_DIR=./uploads
-DEFAULT_EXPIRY_HOURS=24
-BASE_URL=http://localhost:3000
-```
-
-## 🚀 Scripts
-
-- `npm start` - Start production server
-- `npm run dev` - Start development server with nodemon
-- `npm test` - Run tests
-
-## 📝 License
-
-ISC
-
----
 
 **Current Status**: Steps 1-5 Complete ✅ | Step 6 In Progress 🔄 
 
